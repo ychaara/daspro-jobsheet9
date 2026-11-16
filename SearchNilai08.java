@@ -1,7 +1,19 @@
+import java.util.Scanner;
+
 public class SearchNilai08 {
+    // Bagian A Percobaan 4
     public static void main(String[] args) {
-        int[] nilai = { 78, 65, 90, 55, 88, 72 };
-        int key = 100;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Masukkan jumlah elemen array: ");
+        int jumlah = input.nextInt();
+        int[] nilai = new int[jumlah];
+
+        for (int i = 0; i < nilai.length; i++) {
+            System.out.print("Masukkan nilai ke-" + (i + 1) + ": ");
+            nilai[i] = input.nextInt();
+        }
+        System.out.print("Masukkan nilai yang ingin dicari: ");
+        int key = input.nextInt();
         boolean ditemukan = false;
 
         for (int i = 0; i < nilai.length; i++) {
@@ -11,9 +23,9 @@ public class SearchNilai08 {
                 break;
             }
         }
-
-    if (!ditemukan) {
+        if (!ditemukan) {
             System.out.println("Nilai " + key + " tidak ditemukan.");
         }
+        input.close();
     }
 }
