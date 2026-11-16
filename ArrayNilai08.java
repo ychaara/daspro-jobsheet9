@@ -9,8 +9,9 @@ class ArrayNilai08 {
             nilaiAkhir[i] = input.nextInt();
         }
         for (int i = 0; i < nilaiAkhir.length; i++) {
-            String status = (nilaiAkhir[i] >= 70) ? "LULUS" : "TIDAK LULUS";
-            System.out.println("nilaiAkhir[" + i + "] = " + nilaiAkhir[i] + " (" + status + ")");
+            if (nilaiAkhir[i] > 70) {
+                System.out.println("nilaiAkhir[" + i + "] = " + nilaiAkhir[i] + " (LULUS)");
+            }
         }
     }
 }
